@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>首页</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href='/stylesheets/index.css' />
+    <link rel="shortcut icon" href="/images/favicon.ico">
+</head>
+
+<body>
+    <%- include("bar.ejs",{username:username}) %>
+
+        <table>
+            <tr>
+                <th>序号</th>
+                <th>标题</th>
+                <th>时间</th>
+                <th>发布人</th>
+                <th>操作</th>
+            </tr>
+            <% for(var i =0;i<list.length;i++){%>
+                <tr>
+                    <td>
+                        <%= i+1%>
+                    </td>
+                    <td>
+                        <a href="/work/details?id=<%= list[i]._id %>">
+                            <%= list[i].title%>
+                        </a>
+                    </td>
+                    <td>
+                        <%= list[i].time%>
+                    </td>
+                    <td>
+                        <%= list[i].username%>
+                    </td>
+                    <td>
+                        <a href="/do?id=<%= list[i]._id %>&page=<%= page %>">修改</a>
+                        <i>|</i>
+                        <a href="/work/delete?id=<%= list[i]._id %>&page=<%= page %>">删除</a>
+                    </td>
+                </tr>
+                <%}%>
+        </table>
+        <div class="page">
+            <% for(var i =1;i<=total;i++){%>
+                <a href="/?page=<%=i %>">
+                    <%=i %>
+                </a>
+                <%}%>
+        </div>
+</body>
+
+</html>

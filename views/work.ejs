@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>写文章</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href='/stylesheets/index.css' />
+    <link rel="shortcut icon" href="/images/favicon.ico">
+</head>
+
+<body>
+    <%- include("bar.ejs",{username:username}) %>
+
+        <form action="/work/add" method="POST">
+            <input type="hidden" name="id" value="<%= data.id%>">
+            <input type="hidden" name="page" value="<%= data.page%>">
+            <input class="title" type="text" name="title" placeholder="请输入文章标题" value="<%= data.title%>">
+            <textarea name="content" cols="30" rows="10"><%- data.content%></textarea>
+            <%if(data.id){%>
+                <input class="submit" type="submit" value="修改">
+                <%}else{%>
+                    <input class="submit" type="submit" value="发布">
+                    <%}%>
+
+        </form>
+</body>
+
+</html>

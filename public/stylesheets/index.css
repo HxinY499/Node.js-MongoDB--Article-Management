@@ -1,0 +1,121 @@
+* {
+    padding: 0;
+    margin: 0;
+    border: none;
+}
+
+.top {
+    position: fixed;
+    top: 0;
+    height: 40px;
+    width: 100%;
+    background-color: rgba(0, 0, 0, .8);
+    line-height: 40px;
+}
+
+.top a {
+    float: right;
+    margin-right: 40px;
+    text-decoration: none;
+    color: white;
+}
+
+.top a.off {
+    margin-right: 150px;
+}
+
+.top a:active {
+    color: #DBDBDB;
+}
+
+.top span {
+    color: white;
+    float: right;
+    margin-right: 40px;
+}
+
+form {
+    width: 800px;
+    height: 600px;
+    margin: 100px auto 0 auto;
+}
+
+form textarea {
+    display: block;
+    box-sizing: border-box;
+    width: 800px;
+    height: 400px;
+    border: 1px solid grey;
+}
+
+form .title {
+    width: 300px;
+    height: 50px;
+    margin-bottom: 20px;
+    border: 1px solid grey;
+}
+
+form .submit {
+    width: 80px;
+    height: 40px;
+    margin-top: 40px;
+    float: right;
+}
+
+table {
+    width: 800px;
+    margin: 100px auto 0 auto;
+    min-height: 50px;
+    line-height: 50px;
+    text-align: left;
+    border-collapse: collapse;
+}
+
+table tr th,
+table tr td {
+    border: 1px solid black;
+    padding-left: 20px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.page {
+    width: 800px;
+    line-height: 20px;
+    margin: 10px auto;
+    font-size: 18px;
+}
+
+.page a {
+    float: left;
+    margin-right: 10px;
+}
+
+.wrapper {
+    width: 800px;
+    margin: 100px auto;
+}
+
+.title {
+    height: 100px;
+}
+
+.title h2 {
+    font-size: 30px;
+}
+
+.title span {
+    float: left;
+    display: block;
+    margin-top: 20px;
+    margin-right: 20px;
+    color: gray;
+    font-size: 16px;
+}
+
+.content {
+    font-size: 18px;
+    text-align: justify;
+}
